@@ -1,0 +1,14 @@
+[
+  { "id": "c001", "title": "Node.js desde Cero", "category": "backend", "instructor": "Ana Torres", "price": 49.99, "durationHours": 12, "active": true },
+  { "id": "c002", "title": "React Avanzado", "category": "frontend", "instructor": "Carlos Ruiz", "price": 59.99, "durationHours": 18, "active": true },
+  { "id": "c003", "title": "Bases de Datos SQL", "category": "data", "instructor": "María Gómez", "price": 39.99, "durationHours": 10, "active": true },
+  { "id": "c004", "title": "TypeScript Profesional", "category": "backend", "instructor": "Ana Torres", "price": 44.99, "durationHours": 14, "active": true },
+  { "id": "c005", "title": "Diseño UX/UI", "category": "design", "instructor": "Laura Pérez", "price": 34.99, "durationHours": 8, "active": true },
+  { "id": "c006", "title": "Python para Data Science", "category": "data", "instructor": "Jorge Salinas", "price": 69.99, "durationHours": 20, "active": false },
+  { "id": "c007", "title": "Vue.js Práctico", "category": "frontend", "instructor": "Carlos Ruiz", "price": 29.99, "durationHours": 9, "active": true },
+  { "id": "c008", "title": "DevOps con Docker", "category": "devops", "instructor": "Pedro Ibarra", "price": 79.99, "durationHours": 16, "active": true },
+  { "id": "c009", "title": "Figma para Principiantes", "category": "design", "instructor": "Laura Pérez", "price": 19.99, "durationHours": 6, "active": true },
+  { "id": "c010", "title": "APIs REST con Express", "category": "backend", "instructor": "Ana Torres", "price": 54.99, "durationHours": 15, "active": false },
+  { "id": "c011", "title": "Kubernetes Esencial", "category": "devops", "instructor": "Pedro Ibarra", "price": 89.99, "durationHours": 22, "active": true },
+  { "id": "c012", "title": "Machine Learning Básico", "category": "data", "instructor": "Jorge Salinas", "price": 74.99, "durationHours": 25, "active": true }
+]
