@@ -6,13 +6,15 @@ Cada carpeta `week-XX/` tiene su propio `README.md` con instrucciones específic
 |---|---|---|
 | 01 | Fundamentos de Node.js (CLI + TypeScript) | ✅ |
 | 02 | Servidor Express con CRUD completo | ✅ |
+| 03 | API REST con arquitectura en capas | ✅ |
 
-## Última entrega — `week-02` · Express Intro
+## Última entrega — `week-03` · REST API Arquitectura
 
-API REST con Express 5 + TypeScript sobre el dominio de **cursos online** (`Course`),
-con operaciones CRUD completas y middlewares personalizados.
+API REST con arquitectura en 4 capas (routes → controllers → services → repositories)
+sobre el dominio de **cursos online** (`Course`), con paginación y contratos de
+respuesta tipados.
 
-Ver detalle completo en [`week-02-express_intro/3-proyecto/starter/README.md`](./week-02-express_intro/3-proyecto/starter/README.md).
+Ver detalle completo en [`week-03-rest_api_arquitectura/3-proyecto/starter/README.md`](./week-03-rest_api_arquitectura/3-proyecto/starter/README.md).
 
 ## Stack
 
