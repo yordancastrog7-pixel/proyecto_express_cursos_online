@@ -1,0 +1,28 @@
+{
+  "name": "proyecto-semana-04",
+  "version": "1.0.0",
+  "description": "Proyecto: Validación con Zod, AppError, error handler y logging con Winston/Morgan",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@10.34.5",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "morgan": "^1.12.0",
+    "winston": "^3.19.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.1",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "22.15.3",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}

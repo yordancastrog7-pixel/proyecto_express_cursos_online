@@ -7,14 +7,16 @@ Cada carpeta `week-XX/` tiene su propio `README.md` con instrucciones específic
 | 01 | Fundamentos de Node.js (CLI + TypeScript) | ✅ |
 | 02 | Servidor Express con CRUD completo | ✅ |
 | 03 | API REST con arquitectura en capas | ✅ |
+| 04 | Validación (Zod), errores (AppError) y logging (Winston/Morgan) | ✅ |
 
-## Última entrega — `week-03` · REST API Arquitectura
+## Última entrega — `week-04` · Validación, Errores y Logging
 
-API REST con arquitectura en 4 capas (routes → controllers → services → repositories)
-sobre el dominio de **cursos online** (`Course`), con paginación y contratos de
-respuesta tipados.
+Extiende la API de la semana 03 con validación de entrada (Zod), manejo
+estructurado de errores (`AppError` + middleware global de 4 parámetros) y
+logging profesional (Winston + Morgan) sobre el dominio de **cursos online**
+(`Course`).
 
-Ver detalle completo en [`week-03-rest_api_arquitectura/3-proyecto/starter/README.md`](./week-03-rest_api_arquitectura/3-proyecto/starter/README.md).
+Ver detalle completo en [`week-04-validacion_error_handling/3-proyecto/starter/README.md`](./week-04-validacion_error_handling/3-proyecto/starter/README.md).
 
 ## Stack
 
