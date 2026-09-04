@@ -1,0 +1,33 @@
+{
+  "name": "proyecto-semana-05",
+  "version": "1.0.0",
+  "description": "Proyecto: API con PostgreSQL y Prisma ORM",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@10.34.5",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsc",
+    "start": "node --env-file=.env dist/server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "express": "5.1.0",
+    "morgan": "^1.12.0",
+    "winston": "^3.19.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.1",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "22.15.3",
+    "prisma": "6.19.3",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}

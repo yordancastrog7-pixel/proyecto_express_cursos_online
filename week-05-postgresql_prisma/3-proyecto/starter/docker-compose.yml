@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cursos_online
+    ports:
+      # 5434 en el host: el 5432 y el 5433 ya están ocupados en esta máquina
+      # (un PostgreSQL nativo de Windows y otro proyecto en Docker).
+      - '5434:5432'
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

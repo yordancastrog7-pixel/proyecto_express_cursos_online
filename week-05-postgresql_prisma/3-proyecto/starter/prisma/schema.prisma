@@ -1,0 +1,48 @@
+// ============================================
+// PRISMA SCHEMA — Dominio: Plataforma de Cursos Online
+// ============================================
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Recurso principal — igual al de semanas 02-04, ahora persistido en Postgres.
+model Course {
+  id            String   @id @default(uuid()) @db.Uuid
+  // Unique a propósito: nos da un caso real para probar el error P2002 (409).
+  title         String   @unique
+  category      String
+  instructor    String
+  price         Float
+  durationHours Int
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  lessons Lesson[]
+
+  @@map("courses")
+}
+
+// Recurso secundario — relación 1:N con Course (un curso tiene muchas lecciones).
+model Lesson {
+  id      String  @id @default(uuid()) @db.Uuid
+  title   String
+  content String?
+  // Posición de la lección dentro del curso (1, 2, 3...)
+  order   Int
+
+  course   Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  courseId String @db.Uuid
+
+  createdAt DateTime @default(now())
+
+  // Evita dos lecciones con el mismo número de orden en el mismo curso,
+  // y de paso nos da una llave compuesta útil para el seed idempotente.
+  @@unique([courseId, order])
+  @@map("lessons")
+}
