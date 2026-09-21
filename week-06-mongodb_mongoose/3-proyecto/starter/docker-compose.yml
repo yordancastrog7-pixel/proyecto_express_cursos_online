@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      # 27018 en el host: el 27017 ya lo usa un MongoDB nativo en esta máquina.
+      - '27018:27017'
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
