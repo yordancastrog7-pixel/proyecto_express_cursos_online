@@ -1,0 +1,15 @@
+name: cursos-week07
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      # 27019 en el host: el 27017 lo usa un MongoDB nativo en esta máquina
+      # y el 27018 lo usa el proyecto de la semana 06.
+      - '27019:27017'
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
