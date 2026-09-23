@@ -7,15 +7,21 @@ Cada carpeta `week-XX/` tiene su propio `README.md` con instrucciones específic
 | 01 | Fundamentos de Node.js (CLI + TypeScript) | ✅ |
 | 02 | Servidor Express con CRUD completo | ✅ |
 | 03 | API REST con arquitectura en capas | ✅ |
+| 04 | Validación (Zod), errores (AppError) y logging (Winston/Morgan) | ✅ |
+| 05 | PostgreSQL + Prisma ORM (relación 1:N Course-Lesson) | ✅ |
+| 06 | MongoDB + Mongoose (referencia Course-Category con populate) | ✅ |
+| 07 | Autenticación JWT (bcrypt, access/refresh tokens, cookies HttpOnly) | ✅ |
 
-## Última entrega — `week-03` · REST API Arquitectura
+## Última entrega — `week-07` · Autenticación JWT
 
-API REST con arquitectura en 4 capas (routes → controllers → services → repositories)
-sobre el dominio de **cursos online** (`Course`), con paginación y contratos de
-respuesta tipados.
+La API de cursos ahora es **privada**: solo responde a usuarios con sesión. Incluye registro
+y login con contraseñas hasheadas con `bcrypt`, access token (15 min) y refresh token (7 días)
+guardados en **cookies HttpOnly**, refresh con **rotación** y detección de reutilización,
+logout que invalida la sesión, y un `authMiddleware` que protege todas las rutas de
+`Course`. Los secretos viven en el `.env`, nunca en el código.
 
-Ver detalle completo en [`week-03-rest_api_arquitectura/3-proyecto/starter/README.md`](./week-03-rest_api_arquitectura/3-proyecto/starter/README.md).
+Ver detalle completo en [`week-07-autenticacion_jwt/3-proyecto/starter/README.md`](./week-07-autenticacion_jwt/3-proyecto/starter/README.md).
 
 ## Stack
 
-Node.js · TypeScript · Express · pnpm
+Node.js · TypeScript · Express · PostgreSQL · Prisma · MongoDB · Mongoose · JWT · bcrypt · Docker · pnpm
