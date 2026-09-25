@@ -11,17 +11,19 @@ Cada carpeta `week-XX/` tiene su propio `README.md` con instrucciones específic
 | 05 | PostgreSQL + Prisma ORM (relación 1:N Course-Lesson) | ✅ |
 | 06 | MongoDB + Mongoose (referencia Course-Category con populate) | ✅ |
 | 07 | Autenticación JWT (bcrypt, access/refresh tokens, cookies HttpOnly) | ✅ |
+| 08 | Autorización y seguridad (RBAC, Helmet, CORS, rate limiting, sanitización) | ✅ |
 
-## Última entrega — `week-07` · Autenticación JWT
+## Última entrega — `week-08` · Autorización y seguridad
 
-La API de cursos ahora es **privada**: solo responde a usuarios con sesión. Incluye registro
-y login con contraseñas hasheadas con `bcrypt`, access token (15 min) y refresh token (7 días)
-guardados en **cookies HttpOnly**, refresh con **rotación** y detección de reutilización,
-logout que invalida la sesión, y un `authMiddleware` que protege todas las rutas de
-`Course`. Los secretos viven en el `.env`, nunca en el código.
+La API distingue ahora **quién puede hacer qué**: dos roles (`user` y `admin`) con un
+middleware `requireRole()`, y la regla de que solo el creador de un curso (o un admin)
+puede modificarlo. Se suman las capas de protección: **Helmet** (cabeceras seguras),
+**CORS con lista blanca**, **rate limiting** (general y estricto en login/registro con
+respuesta 429), **sanitización contra inyección NoSQL** y errores sin stack trace en
+producción. El primer administrador se crea con `pnpm seed:admin` desde el `.env`.
 
-Ver detalle completo en [`week-07-autenticacion_jwt/3-proyecto/starter/README.md`](./week-07-autenticacion_jwt/3-proyecto/starter/README.md).
+Ver detalle completo en [`week-08-autorizacion_seguridad/3-proyecto/starter/README.md`](./week-08-autorizacion_seguridad/3-proyecto/starter/README.md).
 
 ## Stack
 
-Node.js · TypeScript · Express · PostgreSQL · Prisma · MongoDB · Mongoose · JWT · bcrypt · Docker · pnpm
+Node.js · TypeScript · Express · PostgreSQL · Prisma · MongoDB · Mongoose · JWT · bcrypt · Helmet · Docker · pnpm
