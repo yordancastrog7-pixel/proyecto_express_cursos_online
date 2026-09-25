@@ -1,0 +1,14 @@
+name: cursos-week08
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      # 27020 en el host: 27017 (Mongo nativo), 27018 (semana 06) y 27019 (semana 07) ya están usados.
+      - '27020:27017'
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
